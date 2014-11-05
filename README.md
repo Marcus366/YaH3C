@@ -17,7 +17,7 @@ YaH3C 是用于校园网认证的客户端，支持中山大学东校区.
 
 依赖
 ------------
- 
+
 * 主流Linux发行版，包括OpenWrt/DD-WRT
 * Python2
 
@@ -38,7 +38,7 @@ sudo pacman -S git
 ```bash
 git clone git://github.com/humiaozuzu/YaH3C.git
 cd YaH3C
-sudo python setup.py install
+sudo ./setup.py install
 ```
 
 **ArchLinux**默认安装的python是python3，你需要手动安装python2。
@@ -67,7 +67,7 @@ sudo yah3c
 YaH3C支持基本的命令行参数，执行`yah3c -h`可以看到支持的命令行参数
 
 ``` bash
-$ yah3c -h       
+$ yah3c -h
 usage: yah3c [-h] [-u USERNAME] [-debug]
 
 Yet Another H3C Authentication Client
@@ -86,7 +86,7 @@ optional arguments:
 用户的登陆信息按照如下的格式保存在文件`/etc/yah3c.conf`中：
 
 ``` ini
-[account]                  # 你的帐户 
+[account]                  # 你的帐户
 password = 123456          # 密码
 ethernet_interface = eth0  # 使用的网卡，默认为eth0
 dhcp_command = dhcpcd      # 验证成功后使用的dhcp命令(dhcpcd/dhclient)，默认为空
